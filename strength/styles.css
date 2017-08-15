@@ -1,0 +1,305 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+body {
+  background-color: #101010;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fafafa;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #F4F4F4;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+header {
+  text-align: center;
+  max-width: 336px;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+@media (min-width:600px) {
+  header {
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+header p {
+  color: #656565;
+  font-size: 1.25em;
+  margin-bottom: 2rem;
+}
+
+header img {
+  margin-bottom: 2rem;
+  left: 0;
+  margin-top: -2px;
+}
+
+/* signup form */
+
+.image {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.image img {
+  position: relative;
+  left: 50px;
+}
+
+@media (max-width:600px) {
+  .image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image img {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height: 100%;
+    width: auto;
+  }
+}
+
+form {
+  position: relative;
+  text-align: left;
+}
+
+input.email {
+  font-size: 19px;
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  height: 50px;
+  width: 260px;
+  padding-right: 94px;
+  margin-left: 20px;
+}
+
+@media (min-width:600px) {
+  input.email {
+    width: 336px;
+    margin-left: 0;
+  }
+}
+
+input.email:focus {
+  outline-color: #4EBEF9;
+}
+
+.signup-button {
+  font-size: 18px;
+  padding: 13px;
+  border: none;
+  border-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: -5px;
+  width: 89px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  color: white;
+  background-color: #4EBEF9;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+  margin-right: 20px;
+  -webkit-appearance: none;
+}
+
+@media (min-width:600px) {
+  .signup-button {
+    margin-right: 0;
+  }
+}
+
+.signup-button:hover {
+  cursor: pointer;
+  background-color: #56cef9;
+}
+
+.signup-button:active {
+  background-color: #4CB6EE;
+}
+
+.post-signup {
+  display: none;
+}
+
+/*  Features */
+.main .container {
+  padding: 0 10px;
+}
+@media (min-width:600px) {
+  .main .container {
+    right: -20px;
+    padding: 0;
+  }
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+@media (min-width:600px) {
+  ul {
+    margin-bottom: 4.5rem;
+  }
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 50px;
+}
+
+@media (min-width:600px) {
+  li {
+    width: 50%;
+    float: left;
+    margin-bottom: 2rem;
+  }
+}
+
+li:first-of-type, li:nth-of-type(3) {
+  padding-right: 40px;
+}
+
+li img {
+  position: absolute;
+  left: 0;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+h2 + p {
+  color: #F4F4F4;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+@media (min-width:600px) {
+  h2 + p {
+    height: 76px;
+  }
+}
+
+.bullshit h2 {
+  color: #FECC4F;
+}
+
+.bullshit img {
+  left: 7px;
+}
+
+.simpleinterface h2 {
+  color: #4EBEF9;
+}
+
+.simpleinterface img {
+  top: 3px;
+}
+
+@media (max-width:600px) {
+  .simpleinterface img {
+    top: 3px;
+    left: 3px;
+  }
+}
+
+.icloud h2 {
+  color: #BDF93E;
+}
+
+.icloud img {
+  top: 1px;
+}
+
+@media (max-width:600px) {
+  .icloud img {
+    top: 1px;
+    left: 4px;
+  }
+}
+
+.devices h2 {
+  color: #F9684E;
+}
+
+.devices img {
+  left: 10px;
+  top: -3px;
+}
+
+/* footer */
+
+footer {
+  border-top: 1px solid #1C2327;
+  padding: 1rem;
+  color: #656565;
+  font-size: 0.875em;
+  text-align: center;
+}
+
+footer a {
+  color: #656565;
+}
+
+footer a:hover {
+  color: #919191;
+}
+
+footer span {
+  display: block;
+}
+
+footer span:last-of-type {
+  margin-top: 0.5rem;
+  font-size: 0.685rem;
+}
+

@@ -73,6 +73,11 @@ header img {
   margin-right: auto;
   max-width: 500px;
   width: 100%;
+
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
 }
 
 .image img {
@@ -301,5 +306,45 @@ footer span {
 footer span:last-of-type {
   margin-top: 0.5rem;
   font-size: 0.685rem;
+}
+
+.top-content {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInUp;
+  animation-delay: 0.5s;
+}
+
+.features {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInUp;
+  animation-delay: 1.3s;
+}
+
+@keyframes slideInUp {
+  from, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+    visibility: visible;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 

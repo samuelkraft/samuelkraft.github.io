@@ -34,9 +34,10 @@ body {
 h1 {
   font-size: 2.5em;
   color: #F4F4F4;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
+  margin-top: 1.4rem;
 }
 
 header {
@@ -55,7 +56,7 @@ header {
 }
 
 header p {
-  color: #656565;
+  color: #777777;
   font-size: 1.25em;
   margin-bottom: 2rem;
 }
@@ -175,12 +176,6 @@ input.email:focus {
 .main .container {
   padding: 0 10px;
 }
-@media (min-width:600px) {
-  .main .container {
-    right: -20px;
-    padding: 0;
-  }
-}
 
 ul {
   margin-bottom: 1rem;
@@ -188,49 +183,112 @@ ul {
 
 @media (min-width:600px) {
   ul {
-    margin-bottom: 4.5rem;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    column-gap: 33px;
+    grid-row-gap: 33px;
   }
 }
 
 li {
+  opacity: 0;
   list-style: none;
+  margin: 0 16px;
   margin-bottom: 1rem;
   position: relative;
-  padding-left: 50px;
+  padding: 70px 20px 30px 20px;
+  text-align: center;
+  background: #181818;
+  background-image: linear-gradient(-180deg, #1B1B1B 0%, #161616 100%);
+  border-radius: 19px;
+}
+
+li:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width:600px) {
   li {
-    width: 50%;
-    float: left;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
-}
-
-li:first-of-type, li:nth-of-type(3) {
-  padding-right: 40px;
 }
 
 li img {
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
 
 h2 + p {
+  font-size: 1em;
   color: #F4F4F4;
   line-height: 1.2;
   font-weight: 400;
 }
 
-@media (min-width:600px) {
-  h2 + p {
-    height: 76px;
+.simpleinterface {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.bullshit {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.icloud {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.devices {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.ios {
+  grid-column: 1/ span 2;
+  grid-row: 3;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 45px;
+  padding-bottom: 0;
+}
+
+.ios h2 {
+  font-size: 1.7em;
+  color: #F7D3BA;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.ios img {
+  position: static;
+  top: auto;
+  margin-bottom: -94px;
+  transform: none;
+  max-width: 100%;
+  width: 100%;
+
+}
+
+@media (max-width:600px) {
+  .ios {
+    padding-top: 35px;
+  }
+  .ios img {
+    max-width: 95%;
+    width: 100%;
+    margin-bottom: -53px;
   }
 }
 
@@ -239,7 +297,7 @@ h2 + p {
 }
 
 .bullshit img {
-  left: 7px;
+  top: 25px;
 }
 
 .simpleinterface h2 {
@@ -247,14 +305,7 @@ h2 + p {
 }
 
 .simpleinterface img {
-  top: 3px;
-}
-
-@media (max-width:600px) {
-  .simpleinterface img {
-    top: 3px;
-    left: 3px;
-  }
+  top: 30px;
 }
 
 .icloud h2 {
@@ -262,14 +313,7 @@ h2 + p {
 }
 
 .icloud img {
-  top: 1px;
-}
-
-@media (max-width:600px) {
-  .icloud img {
-    top: 1px;
-    left: 4px;
-  }
+  top: 30px;
 }
 
 .devices h2 {
@@ -277,8 +321,7 @@ h2 + p {
 }
 
 .devices img {
-  left: 10px;
-  top: -3px;
+  top: 24px;
 }
 
 /* footer */
@@ -315,11 +358,34 @@ footer span:last-of-type {
   animation-delay: 0.5s;
 }
 
-.features {
+.features li {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: slideInUp;
   animation-delay: 1.3s;
+}
+
+.features li:nth-of-type(2) {
+  animation-delay: 1.6s;
+}
+
+.features li:nth-of-type(3) {
+  animation-delay: 1.9s;
+}
+
+.features li:nth-of-type(4) {
+  animation-delay: 2.2s;
+}
+
+.features li:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+
+.ios img {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInUpSmall;
+  animation-delay: 2.7s;
 }
 
 @keyframes slideInUp {
@@ -329,6 +395,22 @@ footer span:last-of-type {
   from {
     opacity: 0;
     transform: translate3d(0, 20%, 0);
+    visibility: visible;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUpSmall {
+  from, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
     visibility: visible;
   }
 

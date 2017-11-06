@@ -1,6 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g fill="none" fill-rule="evenodd">
-    <circle cx="15" cy="15" r="14" stroke="#FECC4F" stroke-width="2"/>
-    <polygon fill="#FECC4F" fill-rule="nonzero" points="23.659 4.77 4.77 23.659 3.984 24.444 5.556 26.016 6.341 25.23 25.23 6.341 26.016 5.556 24.444 3.984"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <linearGradient id="bullshit-c" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".5"/>
+      <stop offset="100%" stop-opacity=".5"/>
+    </linearGradient>
+    <circle id="bullshit-b" cx="15" cy="15" r="15"/>
+    <filter id="bullshit-a" width="146.7%" height="146.7%" x="-23.3%" y="-16.7%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.303668478 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(4 2)">
+    <use fill="#000" filter="url(#bullshit-a)" xlink:href="#bullshit-b"/>
+    <use fill="#FECC4F" xlink:href="#bullshit-b"/>
+    <use fill="url(#bullshit-c)" fill-opacity=".75" style="mix-blend-mode:soft-light" xlink:href="#bullshit-b"/>
+    <path fill="#FFF" d="M22.4195005,13.9804824 L16.2308872,13.9804824 L16.2308872,7.79186909 C16.2308872,7.17300776 15.7245461,6.66666667 15.1056848,6.66666667 C14.4868235,6.66666667 13.9804824,7.17300776 13.9804824,7.79186909 L13.9804824,13.9804824 L7.79186909,13.9804824 C7.17300776,13.9804824 6.66666667,14.4868235 6.66666667,15.1056848 C6.66666667,15.7245461 7.17300776,16.2308872 7.79186909,16.2308872 L13.9804824,16.2308872 L13.9804824,22.4195005 C13.9804824,23.0383619 14.4868235,23.544703 15.1056848,23.544703 C15.7245461,23.544703 16.2308872,23.0383619 16.2308872,22.4195005 L16.2308872,16.2308872 L22.4195005,16.2308872 C23.0383619,16.2308872 23.544703,15.7245461 23.544703,15.1056848 C23.544703,14.4868235 23.0383619,13.9804824 22.4195005,13.9804824 L22.4195005,13.9804824 Z" transform="rotate(45 15.106 15.106)"/>
   </g>
 </svg>

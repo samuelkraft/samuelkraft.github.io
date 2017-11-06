@@ -1,15 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="35" viewBox="0 0 25 35">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="43" viewBox="0 0 33 43">
   <defs>
-    <rect id="devices-a" width="21.591" height="34.091" rx="5"/>
-    <rect id="devices-b" width="12.5" height="14.773" x="12.5" y="19.318" rx="3"/>
+    <linearGradient id="devices-c" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".656"/>
+      <stop offset="100%" stop-opacity=".709"/>
+    </linearGradient>
+    <rect id="devices-b" width="21.591" height="34.091" rx="5"/>
+    <filter id="devices-a" width="164.8%" height="141.1%" x="-32.4%" y="-14.7%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0"/>
+    </filter>
+    <filter id="devices-d" width="150.9%" height="132.3%" x="-25.5%" y="-10.3%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.0878623188 0"/>
+    </filter>
+    <rect id="devices-f" width="12.5" height="14.773" x="12.5" y="19.318" rx="3"/>
+    <filter id="devices-e" width="212%" height="194.8%" x="-56%" y="-33.8%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0"/>
+    </filter>
+    <filter id="devices-g" width="188%" height="174.5%" x="-44%" y="-23.7%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.0878623188 0"/>
+    </filter>
   </defs>
-  <g fill="none" fill-rule="evenodd">
-    <use fill="#F9684E" xlink:href="#devices-a"/>
-    <rect width="19.591" height="32.091" x="1" y="1" stroke="#DA543C" stroke-width="2" rx="5"/>
-    <rect width="8" height="3" x="7" fill="#DA543C" rx="1.5"/>
+  <g fill="none" fill-rule="evenodd" transform="translate(4 2)">
+    <use fill="#000" filter="url(#devices-a)" xlink:href="#devices-b"/>
+    <use fill="#F9684E" xlink:href="#devices-b"/>
+    <use fill="url(#devices-c)" fill-opacity=".4" style="mix-blend-mode:soft-light" xlink:href="#devices-b"/>
+    <use fill="#000" filter="url(#devices-d)" xlink:href="#devices-b"/>
     <g>
-      <use fill="#F9684E" xlink:href="#devices-b"/>
-      <rect width="10.5" height="12.773" x="13.5" y="20.318" stroke="#DA543C" stroke-width="2" rx="3"/>
+      <use fill="#000" filter="url(#devices-e)" xlink:href="#devices-f"/>
+      <use fill="#F9684E" xlink:href="#devices-f"/>
+      <use fill="url(#devices-c)" fill-opacity=".4" style="mix-blend-mode:soft-light" xlink:href="#devices-f"/>
+      <use fill="#000" filter="url(#devices-g)" xlink:href="#devices-f"/>
     </g>
   </g>
 </svg>

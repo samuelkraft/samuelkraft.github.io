@@ -1,3 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="42" height="26" viewBox="0 0 42 26">
-  <path fill="#BDF93E" fill-rule="evenodd" d="M129.181818,56.4336698 C128.971485,56.447514 128.759291,56.4545455 128.545455,56.4545455 C123.273646,56.4545455 119,52.1808999 119,46.9090909 C119,41.6372819 123.273646,37.3636364 128.545455,37.3636364 C128.810224,37.3636364 129.072476,37.3744163 129.331795,37.3955612 C131.36802,33.5893839 135.381619,31 140,31 C145.599933,31 150.310695,34.8069972 151.685363,39.9740695 C152.026634,39.9311878 152.374373,39.9090909 152.727273,39.9090909 C157.296174,39.9090909 161,43.6129171 161,48.1818182 C161,52.7507193 157.296174,56.4545455 152.727273,56.4545455 C152.513154,56.4545455 152.300936,56.4464109 152.090909,56.4304339 L152.090909,56.4545455 L129.181818,56.4545455 L129.181818,56.4336698 Z" transform="translate(-119 -31)"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="34" viewBox="0 0 50 34">
+  <defs>
+    <linearGradient id="cloud-c" x1="41.992%" x2="57.925%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".501"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <path id="cloud-b" d="M155.181818,162.43367 C154.971485,162.447514 154.759291,162.454545 154.545455,162.454545 C149.273646,162.454545 145,158.1809 145,152.909091 C145,147.637282 149.273646,143.363636 154.545455,143.363636 C154.810224,143.363636 155.072476,143.374416 155.331795,143.395561 C157.36802,139.589384 161.381619,137 166,137 C171.599933,137 176.310695,140.806997 177.685363,145.97407 C178.026634,145.931188 178.374373,145.909091 178.727273,145.909091 C183.296174,145.909091 187,149.612917 187,154.181818 C187,158.750719 183.296174,162.454545 178.727273,162.454545 C178.513154,162.454545 178.300936,162.446411 178.090909,162.430434 L178.090909,162.454545 L155.181818,162.454545 L155.181818,162.43367 Z"/>
+    <filter id="cloud-a" width="133.3%" height="155%" x="-16.7%" y="-19.6%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0"/>
+    </filter>
+    <filter id="cloud-d" width="128.6%" height="147.1%" x="-14.3%" y="-15.7%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.149428216 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-141 -135)">
+    <use fill="#000" filter="url(#cloud-a)" xlink:href="#cloud-b"/>
+    <use fill="#BDF93E" xlink:href="#cloud-b"/>
+    <use fill="url(#cloud-c)" style="mix-blend-mode:soft-light" xlink:href="#cloud-b"/>
+    <use fill="#000" filter="url(#cloud-d)" xlink:href="#cloud-b"/>
+  </g>
 </svg>
